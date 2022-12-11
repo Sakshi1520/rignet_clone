@@ -1,0 +1,45 @@
+// Font family variables
+$primary-font: 'Roboto', Helvetica, sans-serif;
+$secondary-font: 'Helvetica Neue', Helvetica, sans-serif;
+$icon-font: 'rignet';
+
+// Color variables
+$primary-color: #1D1D1D;
+$secondary-color: #FFF;
+$tango-color: #EF7622;
+$mid-gray-color: #65666B;
+
+// Font weight variables
+$normal-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+
+// Background color variables
+$alabaster-bg: #F8F8F8;
+$concrete-bg: #F2F2F2;
+$gradient-bg: linear-gradient(126.81deg, #F8AE47 3.48%, #EF7622 116.85%);
+$hero-gradient-mobile: linear-gradient(60.09deg, rgba(5, 5, 5, 0.64221) 28.79%, rgba(70, 70, 70, 0.726478) 51.17%, rgba(154, 154, 154, 0.0001) 69.2%, rgba(160, 160, 160, 0.0001) 78.26%, rgba(216, 216, 216, 0.0001) 98.64%);
+$hero-gradient-desktop: linear-gradient(60.72deg, rgba(5, 5, 5, 0.64221) 18.07%, rgba(70, 70, 70, 0.726478) 43.89%, rgba(154, 154, 154, 0.0001) 66.29%, rgba(160, 160, 160, 0.0001) 73.94%, rgba(216, 216, 216, 0.0001) 98.65%);
+$blue-gradient-bg: linear-gradient(70.26deg, #030F21 22.16%, #3E445A 140.31%, #40465C 140.37%);
+$consultation-bg: linear-gradient(133.38deg, rgba(3, 15, 33, 0.79) 3.62%, rgba(20, 30, 49, 0.79) 57.61%, rgba(64, 70, 92, 0.79) 98.59%);
+$footer-gradient-bg: linear-gradient(131.71deg, #EF7622 3.59%, #F8AE47 85.03%);
+
+// Base path variables
+$base-icon-font-path: './assets/fonts/rignet-icons';
+$base-text-font-path: './assets/fonts';
+$base-img-path: './assets/imgs';
+
+// Screen width breakpoints for media query
+$breakpoints: (
+    tablet: 768px,
+    desktop-sm: 1025px,
+    desktop-md: 1440px,
+    desktop-lg: 1800px,
+    desktop-xl: 2500px
+);
+
+// Box shadow variables
+$header-shadow: 0rem -.3rem 1.9rem rgba(0, 0, 0, 0.13);
+$section-shadow: 0px 15px 16px -10px  rgba(0, 0, 0, 0.3);
+$card-shadow: 0rem .8rem 1.8rem rgba(0, 0, 0, 0.21909);
+$img-detail-shadow: 4px 4px 13px rgba(0, 0, 0, 0.170177);

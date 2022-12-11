@@ -1,0 +1,41 @@
+// Mixin for media queries
+@mixin media($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+    @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+        $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
+
+    @media screen and (min-width: #{$mq-breakpoint}) {
+        @content;
+    }
+}
+
+// Mixin for ellipsis - truncates text overflow
+@mixin ellipsis($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// Mixin for Flex
+@mixin flex($direction: row, $justify-content: flex-start, $align-items: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+// Mixin to arrange the elements in Benefits Section
+@mixin arrangeChildren($no-of-children) {
+    $half: round($no-of-children/2);
+    @for $i from 1 through $no-of-children {
+        &:nth-child(#{$i}) {
+            @if $i <= $half {
+                order: $i - 1;
+            }
+            @else {
+                order: $i - $half - 1;
+            }
+        }
+    }
+}

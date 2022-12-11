@@ -1,0 +1,37 @@
+.display-block {
+    display: block;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+// Animation for mobile nav
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100vh;
+    }
+}
+
+// General container for entire webpage
+.container {
+    margin: 0 auto;
+
+    @include media(tablet) {
+        max-width: 708px;
+    }
+
+    @include media(desktop-sm) {
+        max-width: 943px;
+    }
+
+    @include media(desktop-md) {
+        max-width: 1206px;
+    }
+}

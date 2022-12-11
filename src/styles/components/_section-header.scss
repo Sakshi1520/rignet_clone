@@ -1,0 +1,110 @@
+.section-header {
+    &__intro {
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        line-height: 1.875rem;
+        letter-spacing: .152rem;
+        padding-bottom: .3rem;
+
+        @include media(tablet) {
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            letter-spacing: .171rem;
+        }
+
+        @include media(desktop-sm) {
+            font-size: 2rem;
+            line-height: 2.3rem;
+        }
+
+        @include media(desktop-md) {
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.3rem;
+        font-weight: $medium-weight;
+        line-height: 2.7rem;
+        letter-spacing: -0.038rem;
+        margin: 0;
+        max-width: 92%;
+
+        @include media(tablet) {
+            max-width: 70%;
+            font-size: 2.6rem;
+            line-height: 2.85rem;
+        }
+
+        @include media(desktop-sm) {
+            max-width: 60%;
+            font-size: 3rem;
+            line-height: 3.4rem;
+        }
+
+        @include media(desktop-md) {
+            font-size: 3.8rem;
+            line-height: 4rem;
+        }
+    }
+
+    &__content {
+        @include flex();
+    }
+
+    &__skew-icon {
+        width: 0;
+        @include media(desktop-md) {
+            width: .8rem;
+            height: 3.7rem;
+            border: .15rem solid $secondary-color;
+            margin: 2rem 2rem 0 .8rem;
+            transform: skewX(-25deg);
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding-top: 1rem;
+
+        @include media(tablet) {
+            max-width: 82%;
+            font-size: 1.6rem;
+        }
+
+        @include media(desktop-sm) {
+            padding-top: .5rem;
+            max-width: 88%;
+            font-size: 1.7rem;
+            line-height: 2.3rem;
+        }
+
+        @include media(desktop-md) {
+            max-width: 83%;
+            padding-top: 1.5rem;
+        }
+    }
+
+    & .link {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+
+        @include media(desktop-sm) {
+            font-size: 1.7rem;
+            line-height: 2rem;
+        }
+
+        & .icon {
+            font-size: 1.8rem;
+            padding-left: 1rem;
+
+            @include media(desktop-sm) {
+                padding-left: .7rem;
+                font-size: 2.2rem;
+            }
+        }
+    }
+}

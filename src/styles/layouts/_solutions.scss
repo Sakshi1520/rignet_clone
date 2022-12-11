@@ -1,0 +1,163 @@
+.solutions {
+    & .container {
+        padding: 4.5rem 2rem 3.3rem 2rem;
+
+        @include media(tablet) {
+            @include flex();
+            padding: 5rem 0 2.5rem;
+        }
+
+        @include media(desktop-sm) {
+            padding-top: 5.8rem;
+        }
+
+        @include media(desktop-md) {
+            padding-top: 7rem;
+        }
+    }
+
+    & .section-header {
+        @include media(tablet) {
+            width: 31%;
+            padding-top: 2rem;
+        }
+
+        @include media(desktop-sm) {
+            padding-top: 0;
+        }
+
+        &__title {
+            max-width: 100%;
+            padding-top: 1.2rem;
+
+            @include media(tablet) {
+                width: 90%;
+                padding: 0;
+                line-height: 2.75rem;
+            }
+
+            @include media(desktop-sm) {
+                width: 100%;
+            }
+
+            @include media(desktop-sm) {
+                line-height: 3.4rem;
+            }
+
+            @include media(desktop-md) {
+                padding-top: .5rem;
+                line-height: 4rem;
+            }
+        }
+
+        &__text {
+            padding-top: 2rem;
+
+            @include media(tablet) {
+                padding-top: 1.2rem;
+                max-width: 95%;
+            }
+
+            @include media(desktop-sm) {
+                max-width: 96%;
+            }
+
+            @include media(desktop-md) {
+                padding-top: 2rem;
+            }
+        }
+
+        &__skew-icon {
+            @include media(desktop-md) {
+                width: 2.5rem;
+                margin-top: 2.7rem;
+                border-color: $tango-color;
+            }
+        }
+    }
+
+    & .link {
+        color: $tango-color;
+        padding: 2.5rem 0 0;
+        margin-bottom: 2.5rem;
+
+        @include media(tablet) {
+            margin-bottom: 0;
+            padding: 3.1rem 0 0;
+        }
+
+        @include media(desktop-sm) {
+            padding-top: 4.2rem;
+        }
+
+        @include media(desktop-md) {
+            padding-top: 6rem;
+        }
+
+        &:hover::after {
+            width: 9rem;
+            background: $tango-color;
+
+            @include media(tablet) {
+                width: 9rem;
+            }
+
+            @include media(desktop-sm) {
+                width: 10.5rem;
+            }
+        }
+    }
+
+    & .image-layout {
+        @include media(tablet) {
+            max-height: 46rem;
+        }
+
+        @include media(desktop-sm) {
+            max-height: 48rem;
+        }
+
+        @include media(desktop-md) {
+            max-height: 58rem;
+        }
+
+        &__container {
+            width: 100%;
+            height: 22rem;
+            margin-bottom: 1rem;
+
+            @include media(tablet) {
+                width: 22rem;
+                height: 20.5rem;
+                margin: 0 0 2.5rem 2.5rem;
+            }
+
+            @include media(desktop-sm) {
+                width: 29rem;
+                margin: 0 0 3.5rem 3.5rem;
+            }
+
+            @include media(desktop-md) {
+                width: 37rem;
+                height: 23.1rem;
+                margin: 0 0 4.7rem 4.5rem;
+            }
+        }
+
+        &__detail {
+            width: 21.5rem;
+
+            @include media(tablet) {
+                width: 17.5rem;
+            }
+
+            @include media(desktop-sm) {
+                width: 19rem;
+            }
+
+            @include media(desktop-md) {
+                width: 24.5rem;
+            }
+        }
+    }
+}

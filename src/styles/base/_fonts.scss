@@ -1,0 +1,36 @@
+// Font face for Roboto font
+@font-face {
+    font-family: 'Roboto';
+    src: url("#{$base-text-font-path}/roboto/roboto.woff2") format("woff2"),
+        url("#{$base-text-font-path}/roboto/roboto.woff") format("woff");
+    font-weight: $normal-weight;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("#{$base-text-font-path}/roboto/roboto-medium.woff2") format("woff2"),
+        url("#{$base-text-font-path}/roboto/roboto-medium.woff") format("woff");
+    font-weight: $medium-weight;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("#{$base-text-font-path}/roboto/roboto-bold.woff2") format("woff2"),
+        url("#{$base-text-font-path}/roboto/roboto-bold.woff") format("woff");
+    font-weight: $bold-weight;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("#{$base-text-font-path}/helvetica-neue/condensed-bold.woff2") format("woff2"),
+    url("#{$base-text-font-path}/helvetica-neue/condensed-bold.woff") format("woff");
+    font-weight: $bold-weight;
+    font-style: normal;
+    font-display: swap;
+}

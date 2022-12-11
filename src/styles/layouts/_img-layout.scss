@@ -1,0 +1,49 @@
+// Image Layout
+.image-layout {
+    @include flex(column, space-between);
+
+    @include media(tablet) {
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__detail {
+        position: absolute;
+        background-color: $secondary-color;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        box-shadow: $img-detail-shadow;
+        top: 2.5rem;
+        left: 0;
+        padding: 1.5rem 1rem;
+        font-weight: $normal-weight;
+
+        @include media(tablet) {
+            font-size: 1.3rem;
+            line-height: 1.4rem;
+            padding: 1.1rem 0 1.1rem .8rem;
+            top: 2rem;
+        }
+
+        @include media(desktop-sm) {
+            font-size: 1.1rem;
+            padding: .8rem;
+        }
+
+        @include media(desktop-md) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            padding: 1.2rem;
+            top: 3rem;
+        }
+    }
+}

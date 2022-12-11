@@ -1,0 +1,141 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $secondary-color;
+    box-shadow: $header-shadow;
+
+    &__container {
+        position: relative;
+
+        @include media(desktop-sm) {
+            @include flex(row, space-between, center);
+            max-width: 943px;
+            margin: 0 auto;
+        }
+
+        @include media(desktop-md) {
+            max-width: 1206px;
+        }
+    }
+
+    &__fixed {
+        padding: 1.2rem 2rem;
+        @include flex(row, space-between, center);
+
+        @include media(tablet) {
+            padding: 2rem 0;
+        }
+    }
+
+    &__logo {
+        width: 9.6rem;
+
+        @include media(tablet) {
+            width: 10.8rem;
+        }
+    }
+
+    &__logo-img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__ham {
+        @include flex();
+        font-size: 3rem;
+        cursor: pointer;
+
+        @include media(tablet) {
+            font-size: 4rem;
+        }
+
+        @include media(desktop-sm) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-top: .6rem;
+        height: calc(100vh - 60px);
+        background-color: $alabaster-bg;
+        animation: fade_in_show 0.5s;
+        overflow-y: scroll;
+        z-index: 1;
+
+        @include media(tablet) {
+            height: calc(100vh - 80px);
+        }
+
+        @include media(desktop-sm) {
+            @include flex();
+            overflow: hidden;
+            position: static;
+            width: auto;
+            padding: 0;
+            height: auto;
+            background-color: $secondary-color;
+            animation: none;
+        }
+    }
+
+    &__list {
+        @include media(desktop-sm) {
+            @include flex();
+            margin-right: 1rem;
+        }
+    }
+
+    &__list-item {
+        list-style-type: none;
+        border-bottom: 0.1rem solid #BCBCBC;
+        padding: 2rem 2rem 1.75rem;
+
+        @include media(desktop-sm) {
+            border: none;
+            padding: 0;
+
+            &:last-child .header__link {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        color: $primary-color;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+
+        @include media(desktop-sm) {
+            color: $mid-gray-color;
+            font-size: 1.4rem;
+            margin-left: 3.2rem;
+            letter-spacing: .021rem;
+
+            &:hover {
+                color: $tango-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// On Nav Open in Mobile
+html.nav-open {
+    overflow: hidden;
+
+    & .header__nav {
+        display: block;
+    }
+
+    & .header__nav-shadow {
+        box-shadow: $header-shadow;
+        z-index: 2;
+        position: relative;
+    }
+}

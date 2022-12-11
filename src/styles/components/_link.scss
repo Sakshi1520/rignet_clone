@@ -1,0 +1,63 @@
+.link {
+    font-family: $secondary-font;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: .157rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    @include media(tablet) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        letter-spacing: .18rem;
+    }
+
+    @include media(desktop-sm) {
+        font-size: 1.7rem;
+        line-height: 2rem;
+        letter-spacing: .157rem;
+    }
+
+    &--white {
+        color: $secondary-color;
+    }
+
+    &--orange {
+        color: $tango-color;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 17.5rem;
+            height: .1rem;
+            background: $secondary-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @include media(tablet) {
+                width: 20rem;
+            }
+
+            @include media(desktop-sm) {
+                width: 20.8rem;
+            }
+        }
+    }
+
+    & .icon {
+        font-size: 2rem;
+        padding-left: .5rem;
+
+        @include media(tablet) {
+            font-size: 2.2rem;
+            padding-left: .6rem;
+        }
+    }
+}

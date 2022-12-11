@@ -1,0 +1,155 @@
+.benefits {
+    background: $blue-gradient-bg;
+    color: $secondary-color;
+    box-shadow: $section-shadow;
+
+    & .container {
+        @include flex(column, space-between);
+        padding: 5.8rem 2rem 5rem;
+
+        @include media(tablet) {
+            @include flex();
+            padding: 5rem 0 1.7rem;
+        }
+
+        @include media(desktop-sm) {
+            padding: 6.8rem 0 2.2rem;
+        }
+
+        @include media(desktop-md) {
+            padding: 7.9rem 0 2.4rem;
+        }
+    }
+
+    // Section header styling
+    & .section-header {
+        @include media(tablet) {
+            min-width: 30%;
+        }
+
+        &__title {
+            max-width: 100%;
+            padding-bottom: 1.25rem;
+
+            @include media(tablet) {
+                padding-bottom: 1.4rem;
+            }
+
+            @include media(desktop-sm) {
+                padding-bottom: 2rem;
+            }
+
+            @include media(desktop-md) {
+                padding-bottom: 2.6rem;
+            }
+        }
+
+        &__text {
+            padding-bottom: 2.2rem;
+
+            @include media(tablet) {
+                padding: 0 0 3.1rem;
+                max-width: 88%;
+            }
+
+            @include media(desktop-sm) {
+                padding-bottom: 4.2rem;
+                font-size: 1.8rem;
+                max-width: 95%;
+            }
+
+            @include media(desktop-md) {
+                padding-bottom: 3.8rem;
+            }
+        }
+
+        &__skew-icon {
+            @include media(desktop-md) {
+                width: 2.5rem;
+                margin-top: .5rem;
+            }
+        }
+
+        & .link {
+            &:hover::after {
+                width: 8.8rem;
+
+                @include media(desktop-sm) {
+                    width: 10.5rem;
+                }
+            }
+        }
+    }
+
+    // cards styling
+
+    &-card-container {
+        @include media(tablet) {
+            @include flex(row, space-between);
+            flex-wrap: wrap;
+            padding-left: 3.5rem;
+        }
+
+        @include media(desktop-sm) {
+            padding-left: 4.5rem;
+        }
+    }
+
+    & .section-card {
+        padding-top: 3.2rem;
+
+        @include media(tablet) {
+            @include arrangeChildren(6);
+            width: 47%;
+            padding: 0 0 3rem;
+        }
+
+        @include media(desktop-sm) {
+            padding: 0 0 3.9rem;
+        }
+
+        @include media(desktop-md) {
+            width: 47.5%;
+            padding: 0 0 4.7rem 1rem;
+        }
+
+        & .icon {
+            font-size: 3.4rem;
+
+            @include media(desktop-md) {
+                font-size: 4rem;
+            }
+        }
+
+        &__title {
+            padding-top: .2rem;
+
+            @include media(tablet) {
+                padding-top: 1.25rem;
+            }
+
+            @include media(desktop-sm) {
+                padding-top: 0;
+                margin: 0;
+            }
+        }
+
+        &__text {
+            min-height: auto;
+            margin: .7rem 0 0;
+
+            @include media(tablet) {
+                @include ellipsis(6);
+                margin-top: 1.1rem;
+            }
+
+            @include media(desktop-sm) {
+                margin-top: .5rem;
+            }
+
+            @include media(desktop-md) {
+                margin-top: 1.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@import 'normalize.css';
+
+// 1. Configuration and helpers
+@import
+  'styles/abstracts/variables',
+  'styles/abstracts/mixins',
+  'styles/abstracts/utility';
+
+// 2. Base stuff
+@import
+  'styles/base/base',
+  'styles/base/fonts',
+  'styles/base/icons',
+  'styles/base/typography';
+
+// Components
+@import
+  'styles/components/link',
+  'styles/components/section-header',
+  'styles/components/section-card';
+
+// Layouts
+@import
+  'styles/layouts/header',
+  'styles/layouts/hero-section',
+  'styles/layouts/digital-trans',
+  'styles/layouts/benefits',
+  'styles/layouts/solutions',
+  'styles/layouts/img-layout',
+  'styles/layouts/consultation',
+  'styles/layouts/footer';
